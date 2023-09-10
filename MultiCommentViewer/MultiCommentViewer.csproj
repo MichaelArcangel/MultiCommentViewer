@@ -53,7 +53,7 @@
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="SQLitePCLRaw.bundle_winsqlite3" Version="2.0.4" />
-    <PackageReference Include="System.ComponentModel.Composition" Version="5.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="9.0.2" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +63,8 @@
     <ProjectReference Include="..\BrowserCookieInterfaces\BrowserCookieInterfaces.csproj" />
     <ProjectReference Include="..\CommentViewerCommon\CommentViewerCommon.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\KickIF\KickIF.csproj" />
+    <ProjectReference Include="..\KickSitePlugin\KickSitePlugin.csproj" />
     <ProjectReference Include="..\LineLiveIF\LineLiveIF.csproj" />
     <ProjectReference Include="..\LineLiveSitePlugin\LineLiveSitePlugin.csproj" />
     <ProjectReference Include="..\MildomIF\MildomIF.csproj" />

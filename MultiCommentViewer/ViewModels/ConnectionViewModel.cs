@@ -359,7 +359,9 @@ namespace MultiCommentViewer
         private readonly ISitePluginLoader _sitePluginLoader;
         private readonly IOptions _options;
 
-        //private readonly IEnumerable<ISiteContext> _sites;
+        public ConnectionViewModel(IEnumerable<ISiteContext> sites) => _sites = sites;
+
+        private readonly IEnumerable<ISiteContext> _sites;
         private readonly Dictionary<Guid, SiteViewModel> _siteVmDict = new Dictionary<Guid, SiteViewModel>();
         /// <summary>
         /// ConnectionNameは重複可だから一意識別のために必要

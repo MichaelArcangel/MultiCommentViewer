@@ -54,6 +54,12 @@ namespace BouyomiPlugin
         public bool IsTwitchComment { get { return GetValue(); } set { SetValue(value); } }
         public bool IsTwitchCommentNickname { get { return GetValue(); } set { SetValue(value); } }
 
+        //Kick
+        public bool IsKickConnect { get { return GetValue(); } set { SetValue(value); } }
+        public bool IsKickDisconnect { get { return GetValue(); } set { SetValue(value); } }
+        public bool IsKickComment { get { return GetValue(); } set { SetValue(value); } }
+        public bool IsKickCommentNickname { get { return GetValue(); } set { SetValue(value); } }
+
         //ニコ生
         public bool IsNicoConnect { get { return GetValue(); } set { SetValue(value); } }
         public bool IsNicoDisconnect { get { return GetValue(); } set { SetValue(value); } }
@@ -178,6 +184,12 @@ namespace BouyomiPlugin
             Dict.Add(nameof(IsTwitchDisconnect), new Item { DefaultValue = false, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
             Dict.Add(nameof(IsTwitchComment), new Item { DefaultValue = true, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
             Dict.Add(nameof(IsTwitchCommentNickname), new Item { DefaultValue = true, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
+
+            //Kick
+            Dict.Add(nameof(IsKickConnect), new Item { DefaultValue = false, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
+            Dict.Add(nameof(IsKickDisconnect), new Item { DefaultValue = false, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
+            Dict.Add(nameof(IsKickComment), new Item { DefaultValue = true, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
+            Dict.Add(nameof(IsKickCommentNickname), new Item { DefaultValue = true, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });
 
             //ニコ生
             Dict.Add(nameof(IsNicoConnect), new Item { DefaultValue = false, Predicate = b => true, Serializer = b => b.ToString(), Deserializer = s => bool.Parse(s) });

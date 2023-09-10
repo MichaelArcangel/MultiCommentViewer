@@ -88,6 +88,18 @@ namespace MultiCommentViewer
                 }
             }
         }
+        /**
+         * 接続情報をファイル(setting/connections.txt)を読み込む
+         * 接続情報は画面上部のGridの内容を表示する
+         * 例)
+         * Name=ツイキャス
+         * SiteName=ツイキャス
+         * Url=https://twitcasting.tv/******
+         * BrowserName=Chrome(Default)
+         * BackColorArgb=#FFA52A2A
+         * ForeColorArgb=#FF00FF7F
+         * 
+         */
         public IEnumerable<ConnectionSerializer> Load()
         {
             var connectionSerializerList = new List<ConnectionSerializer>();
@@ -142,7 +154,7 @@ namespace MultiCommentViewer
         }
         private readonly IBrowserLoader _browserLoader;
         private readonly IIo _io;
-        //IEnumerable<ISiteContext> _siteContexts;
+        IEnumerable<ISiteContext> _siteContexts;
         IEnumerable<SiteViewModel> _siteVms;
         IEnumerable<BrowserViewModel> _browserVms;
 
@@ -932,6 +944,17 @@ namespace MultiCommentViewer
                     case BigoSitePlugin.IBigoGift bigoGift:
                         mcvCvm = new McvBigoGiftViewModel(bigoGift, messageContext.Metadata, messageContext.Methods, connectionName, _options);
                         break;
+                }
+            }
+            else if (messageContext.Message is KickSitePlugin.IKickMessage kickMessage)
+            {
+                if (kickMessage is KickSitePlugin.IKickComment comment)
+                {
+                    mcvCvm = new KickCommentViewModel(comment, messageContext.Metadata, messageContext.Methods, connectionName, _options);
+                }
+                if (kickMessage is KickSitePlugin.IKickNotice notice)
+                {
+                    mcvCvm = new KickCommentViewModel(notice, messageContext.Metadata, messageContext.Methods, connectionName, _options);
                 }
             }
             else if (messageContext.Message is TestSitePlugin.ITestMessage testMessage)

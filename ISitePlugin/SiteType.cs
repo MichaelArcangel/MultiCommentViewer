@@ -25,5 +25,6 @@
         Mixer,
         Mildom,
         Bigo,
+        Kick,
     }
 }

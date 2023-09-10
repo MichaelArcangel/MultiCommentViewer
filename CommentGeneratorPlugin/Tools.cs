@@ -65,6 +65,9 @@ namespace CommentViewer.Plugin
                 case BigoSitePlugin.IBigoMessage _:
                     siteName = "bigo";
                     break;
+                case KickSitePlugin.IKickMessage _:
+                    siteName = "twitch";
+                    break;
                 default:
                     siteName = "unknown";
                     break;

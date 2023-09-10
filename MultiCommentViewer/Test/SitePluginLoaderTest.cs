@@ -31,6 +31,7 @@ namespace MultiCommentViewer.Test
                 new ShowRoomSitePlugin.ShowRoomSiteContext(options,new ShowRoomSitePlugin.ShowRoomServer(), logger,userStoreManager),
                 new MildomSitePlugin.MildomSiteContext(options, new MildomSitePlugin.MildomServer(),logger, userStoreManager),
                 new BigoSitePlugin.BigoSiteContext(options, new BigoSitePlugin.BigoServer(), logger, userStoreManager),
+                new KickSitePlugin.KickSiteContext(options,new KickSitePlugin.KickServer(), logger, userStoreManager),
 #if DEBUG
                 new TestSitePlugin.TestSiteContext(options),
 #endif

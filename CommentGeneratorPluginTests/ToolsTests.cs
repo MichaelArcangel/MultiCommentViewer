@@ -30,6 +30,7 @@ namespace CommentGeneratorPluginTests
                 new object[]{ new Mock<LineLiveSitePlugin.ILineLiveComment>().Object, "linelive" },
                 new object[]{ new Mock<PeriscopeSitePlugin.IPeriscopeComment>().Object, "periscope" },
                 new object[]{ new Mock<MildomSitePlugin.IMildomComment>().Object, "mildom" },
+                new object[]{ new Mock<KickSitePlugin.IKickComment>().Object, "kick" },
             };
         }
         [TestCaseSourceAttribute(nameof(Cases))]
