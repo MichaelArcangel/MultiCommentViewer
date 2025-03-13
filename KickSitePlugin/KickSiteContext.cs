@@ -13,7 +13,7 @@ namespace KickSitePlugin
 {
     public class KickSiteContext : SiteContextBase
     {
-        public override Guid Guid => new Guid("22F7824A-EA1B-411E-85CA-6C9E6BE94E39");
+        public override Guid Guid => new Guid("F1A21658-E965-45A5-8689-EBDA9B3EBBBD");
 
         public override string DisplayName => "Kick";
 
